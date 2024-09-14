@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@media (max-width: 500px){
+    .main{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        margin: 40px 10px;
+    }
+
+    img{
+        height: 200px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 1000px){
+    .main{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        row-gap: 40px;
+        margin: 40px 10px;
+        font-size: 1.2em;
+    }
+
+    img{
+        height: 200px;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (min-width: 1001px){
+    .main section{
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        grid-template-areas: 
+        "img"
+        "resto"
+        ;
+        background-color: white;
+        text-align: center;
+        row-gap: 100px;
+    }
+    
+    img{
+        height: 300px;
+        aspect-ratio: 9/16;
+    }
+}
